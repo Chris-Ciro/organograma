@@ -1,13 +1,17 @@
-import './field.css'
+import "./field.css";
 
-const Field = (props) =>{
-    return (
-        <div className="field">
-            <label> {props.label} </label>
-            <input required={props.obrigatorio} placeholder={props.placeholder} />
-        </div>
-    )
+const Field = (props) => {
+  let valor = "";
+  const digite = (event) => {
+    valor = event.target.value;
+    // console.log(valor);
+  };
+  return (
+    <div className="field">
+      <label> {props.label} </label>
+      <input value={valor} onChange={digite} placeholder={props.placeholder} />
+    </div>
+  );
+};
 
-}
-
-export default Field
+export default Field;
