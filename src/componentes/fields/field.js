@@ -1,15 +1,16 @@
+// import { useState } from "react";
 import "./field.css";
 
 const Field = (props) => {
-  let valor = "";
+  // let valor = "";
+  // const [valor, setValor] = useState("");
   const digite = (event) => {
-    valor = event.target.value;
-    // console.log(valor);
+    props.change(event.target.value);
   };
   return (
     <div className="field">
       <label> {props.label} </label>
-      <input value={valor} onChange={digite} placeholder={props.placeholder} />
+      <input value={props.valor} onChange={digite} placeholder={props.placeholder} />
     </div>
   );
 };
