@@ -5,7 +5,7 @@ import Button from "../button/button.js";
 import { useState } from "react";
 
 const Forms = (props) => {
-  const rating = ["Excelente", "Muito bom", "Normal", "Ruim", "Horrível"];
+  const rating = ['',"Excelente", "Muito bom", "Normal", "Ruim", "Horrível"];
 
   const [anime, setAnime] = useState("");
   const [imagem, setImagem] = useState("");
