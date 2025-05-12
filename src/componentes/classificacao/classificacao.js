@@ -4,6 +4,7 @@ import "./classificacao.css";
 
 const Classificacao = (props) => {
   return (
+    props.listaAnime.length > 0 && // Verifica se a lista de animes não está vazia
     <section
       className="classificacao"
       style={{ backgroundColor: props.corSecundaria }}
@@ -12,6 +13,9 @@ const Classificacao = (props) => {
       <div className="cards">
         {props.listaAnime.map((card) => (
           <Card
+            key={card.anime}
+            corPrimaria={props.corPrimaria}
+            corSecundaria={props.corSecundaria} 
             anime={card.anime}
             imagem={card.imagem}
             classificação={card.classificação}

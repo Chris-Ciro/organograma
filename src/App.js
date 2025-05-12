@@ -34,7 +34,6 @@ function App() {
 
   const [listaAnime, setListaAnime] = useState([]);
   const novaLista = (anime) => {
-    console.log(anime);
     setListaAnime([...listaAnime, anime]);
   };
 
